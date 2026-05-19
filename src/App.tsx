@@ -14,10 +14,10 @@ const characters = [
 ];
 
 const galleryImages = [
-  { src: "/input_file_6.png", alt: "Cenário - Hotel Reis Magos" },
-  { src: "/input_file_7.png", alt: "Conceito - Nicoly" },
-  { src: "/input_file_8.png", alt: "Cenário - Igreja Abandonada" },
-  { src: "/input_file_9.png", alt: "Conceito - Licantropo" },
+  { src: "/Captura%20de%20tela%202026-05-19%20105900.png", alt: "Captura do jogo - exploração urbana" },
+  { src: "/Captura%20de%20tela%202026-05-19%20110226.png", alt: "Captura do jogo - transmissão de Nicoly" },
+  { src: "/Captura%20de%20tela%202026-05-19%20110250.png", alt: "Captura do jogo - encontro sobrenatural" },
+  { src: "/Captura%20de%20tela%202026-05-19%20113608.png", alt: "Captura do jogo - investigação no cenário" },
 ];
 
 export default function App() {
@@ -213,9 +213,9 @@ export default function App() {
       <section id="galeria" className="py-24 px-6 bg-sertao-900 border-b-8 border-sertao-800">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 text-center">
-            <h2 className="text-5xl md:text-7xl text-paper uppercase pixel-text-shadow mb-6">GALERIA DE ARTE</h2>
+            <h2 className="text-5xl md:text-7xl text-paper uppercase pixel-text-shadow mb-6">CAPTURAS DO JOGO</h2>
             <div className="pixel-box-dark px-8 py-4 inline-block text-xl md:text-2xl uppercase">
-              <span className="text-rn-red">ARQUIVOS CONFIDENCIAIS:</span> CONCEITOS E FOTOS RECONSTRUÍDAS DA LIVE.
+              <span className="text-rn-red">ARQUIVOS CONFIDENCIAIS:</span> REGISTROS DIRETOS DA BUILD EM DESENVOLVIMENTO.
             </div>
           </div>
 
@@ -227,13 +227,13 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="pixel-box p-2 bg-sertao-800"
+                className="pixel-box p-2 bg-black"
               >
                  <div className="relative w-full h-full overflow-hidden group aspect-video">
                    <img 
                      src={img.src} 
                      alt={img.alt} 
-                     className="w-full h-full object-cover pixelated transform transition-transform duration-500 group-hover:scale-110"
+                     className="w-full h-full object-contain pixelated transform transition-transform duration-500 group-hover:scale-[1.03]"
                      onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = defaultPixelHero; e.currentTarget.className = "w-full h-full object-contain p-8 bg-[#000] pixelated cursor-not-allowed"; }}
                      referrerPolicy="no-referrer"
                    />
