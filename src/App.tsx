@@ -42,7 +42,7 @@ export default function App() {
             <a href="#lendas" className="hover:text-rn-red transition-colors">LORE</a>
             <a href="#personagens" className="hover:text-rn-red transition-colors">PARTY</a>
             <a href="#galeria" className="hover:text-rn-red transition-colors">GALERIA</a>
-            <a href="/game.zip" download className="pixel-box px-6 py-2 hover:bg-rn-red hover:text-white transition-colors text-2xl uppercase">
+            <a href="https://static.erpg.app/game.zip" download className="pixel-box px-6 py-2 hover:bg-rn-red hover:text-white transition-colors text-2xl uppercase">
               Download
             </a>
           </div>
@@ -88,7 +88,7 @@ export default function App() {
             </p>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              <a href="/game.zip" download className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
+              <a href="https://static.erpg.app/game.zip" download className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
                 <Download size={32} />
                 BAIXAR JOGO
               </a>
