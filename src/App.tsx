@@ -1,15 +1,9 @@
 import { motion } from "motion/react";
-import { Download, Info, Ghost, MapPin, Gamepad2, Menu, X, Sun, Heart, Skull, Instagram, Twitter, Video } from "lucide-react";
+import { Download, Info, Ghost, MapPin, Gamepad2, Menu, X, Sun, Heart, Skull, Instagram, Video } from "lucide-react";
 import { useState } from "react";
 
 // Fallback pixel art SVGs to guarantee a "pixel art" feel even if images fail to generate.
 const defaultPixelHero = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPjxyZWN0IHg9IjUiIHk9IjIiIHdpZHRoPSI2IiBoZWlnaHQ9IjIiIGZpbGw9IiM4QjQ1MTMiLz48cmVjdCB4PSI0IiB5PSI0IiB3aWR0aD0iOCIgaGVpZ2h0PSIyIiBmaWxsPSIjOEI0NTEzIi8+PHJlY3QgeD0iNiIgeT0iNiIgd2lkdGg9IjQiIGhlaWdodD0iMyIgZmlsbD0iI0ZGRTRDNCIvPjxyZWN0IHg9IjYiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMwMDAiLz48cmVjdCB4PSI5IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMDAwIi8+PHJlY3QgeD0iNSIgeT0iMTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjQiIGZpbGw9IiM5OTFiMWIiLz48cmVjdCB4PSI2IiB5PSIxMyIgd2lkdGg9IjEiIGhlaWdodD0iMiIgZmlsbD0iIzhCNDUxMyIvPjxyZWN0IHg9IjkiIHk9IjEzIiB3aWR0aD0iMSIgaGVpZ2h0PSIyIiBmaWxsPSIjOEI0NTEzIi8+PC9zdmc+";
-
-const TikTokIcon = ({ size = 24, className = "" }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
-    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
-  </svg>
-);
 
 const characters = [
   { name: "NICOLY", role: "STREAMER - LVL 01", image: "/nicoly.png", bio: "JOVEM TRANS DA PERIFERIA QUE PROCURA FANTASMAS PARA SEU CANAL." },
@@ -32,7 +26,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-sertao-900 overflow-x-hidden font-pixel text-paper selection:bg-rn-red selection:text-white">
       {/* Navigation (RPG Command Menu Style) */}
-      <nav className="fixed top-0 w-full z-50 bg-sertao-900 border-b-4 border-paper px-6 py-4">
+      <nav className="relative w-full z-30 bg-sertao-900 border-b-4 border-paper px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img 
@@ -74,7 +68,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section - The Title Screen */}
-      <section id="inicio" className="pt-32 pb-20 px-6 relative paper-texture !bg-sertao-800 border-b-8 border-sertao-900">
+      <section id="inicio" className="pt-16 pb-20 px-6 relative paper-texture !bg-sertao-800 border-b-8 border-sertao-900">
         <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiPjwvcmVjdD4KPC9zdmc+')] pointer-events-none"></div>
 
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center min-h-[70vh]">
@@ -98,6 +92,16 @@ export default function App() {
                 <Download size={32} />
                 BAIXAR JOGO
               </button>
+              <a
+                href="https://www.instagram.com/cacadora.do.alem/"
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-gold hover:text-sertao-900 transition-colors cursor-pointer uppercase"
+                aria-label="Ver Instagram"
+              >
+                <Instagram size={32} />
+                VER INSTAGRAM
+              </a>
             </div>
           </motion.div>
 
@@ -249,25 +253,10 @@ export default function App() {
 
       {/* Retro Footer */}
       <footer className="py-12 bg-sertao-900 text-paper/60 px-6 text-xl">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-          <div className="flex items-center gap-4">
-            <Gamepad2 className="w-10 h-10" />
-            <div>
-              <h3 className="text-3xl text-paper">CAÇADORA DO ALÉM</h3>
-              <p className="uppercase">DEMO V. 0.1.6 - RN STUDIO</p>
-            </div>
-          </div>
-          
-          <div className="text-center">
-             <p className="uppercase">© 2026 - ORGULHO POTIGUAR</p>
-             <p className="text-sm">ALL RIGHTS RESERVED.</p>
-          </div>
-
-          <div className="flex gap-6">
-             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-rn-gold cursor-pointer transition-colors" aria-label="Instagram"><Instagram size={28} /></a>
-             <a href="https://tiktok.com" target="_blank" rel="noreferrer" className="hover:text-rn-red cursor-pointer transition-colors" aria-label="TikTok"><TikTokIcon size={28} /></a>
-             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-paper cursor-pointer transition-colors" aria-label="Twitter"><Twitter size={28} /></a>
-          </div>
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <a href="https://www.instagram.com/cacadora.do.alem/" target="_blank" rel="noreferrer" className="hover:text-rn-gold cursor-pointer transition-colors" aria-label="Instagram">
+            <Instagram size={32} />
+          </a>
         </div>
       </footer>
     </div>

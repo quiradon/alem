@@ -1,6 +1,6 @@
 {
-  "name": "Remix: Caçadora do Além",
-  "description": "Uma jornada pixel art 2D pelas lendas e mistérios do Rio Grande do Norte. a ideia é usar caracteristicas tipicas da região mistudando com pixel art para termos um design especial",
+  "name": "Caçadora do Além",
+  "description": "Roguelike pixel art potiguar sobre lives paranormais, lendas urbanas e locais assombrados do Rio Grande do Norte.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
