@@ -42,9 +42,9 @@ export default function App() {
             <a href="#lendas" className="hover:text-rn-red transition-colors">LORE</a>
             <a href="#personagens" className="hover:text-rn-red transition-colors">PARTY</a>
             <a href="#galeria" className="hover:text-rn-red transition-colors">GALERIA</a>
-            <button className="pixel-box px-6 py-2 hover:bg-rn-red hover:text-white transition-colors text-2xl uppercase">
+            <a href="/game.zip" download className="pixel-box px-6 py-2 hover:bg-rn-red hover:text-white transition-colors text-2xl uppercase">
               Download
-            </button>
+            </a>
           </div>
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-paper">
@@ -88,10 +88,10 @@ export default function App() {
             </p>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              <button className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
+              <a href="/game.zip" download className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
                 <Download size={32} />
                 BAIXAR JOGO
-              </button>
+              </a>
               <a
                 href="https://www.instagram.com/cacadora.do.alem/"
                 target="_blank"
