@@ -88,7 +88,7 @@ export default function App() {
             </p>
 
             <div className="flex flex-wrap gap-6 pt-4">
-              <a href="https://static.erpg.app/game.zip" download className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
+              <a href="https://drive.google.com/file/d/1o96m_38xaJF4KBl7NtDKc-JQlm0fuhtg/view?usp=sharing" download className="pixel-box px-8 py-4 text-3xl flex items-center gap-4 hover:bg-rn-red hover:text-white transition-colors cursor-pointer uppercase">
                 <Download size={32} />
                 BAIXAR JOGO
               </a>
